@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		02A02CA8EFD3F1C67F56FA9FC8FC517D /* Pods-SETabView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E562ECC6E99760892FB9289D9AD75CB /* Pods-SETabView_Example-dummy.m */; };
-		119EA18F241C0809003EC67B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119EA18C241C0808003EC67B /* Helper.swift */; };
-		119EA191241C0809003EC67B /* SEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119EA18E241C0809003EC67B /* SEViewController.swift */; };
-		119EA19F241C0EEF003EC67B /* SETabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119EA18D241C0808003EC67B /* SETabView.swift */; };
+		119EA1A9241C23D7003EC67B /* SETabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119EA1A6241C23D7003EC67B /* SETabView.swift */; };
+		119EA1AA241C23D7003EC67B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119EA1A7241C23D7003EC67B /* Helper.swift */; };
+		119EA1AB241C23D7003EC67B /* SEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119EA1A8241C23D7003EC67B /* SEViewController.swift */; };
 		20C08E883635A6E8F71BE50A72F5256E /* SETabView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A0E34FD92E9C95C3BAFAE3F6CF906455 /* SETabView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3068103FFEBEAA8F4585249A2728F7EB /* Pods-SETabView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 726C1FC5276CB65B08C94E0405F6CE43 /* Pods-SETabView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5483C6CF464279F70B5B61AD670CE8D7 /* SETabView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9069743E350AEEA92415E423F9775307 /* SETabView-dummy.m */; };
@@ -42,9 +42,9 @@
 		00F3253C366288BCFDFA5E01C0C08C38 /* Pods-SETabView_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SETabView_Example-Info.plist"; sourceTree = "<group>"; };
 		09B7C3C29BA9C0309F3E20E2760B6E19 /* Pods-SETabView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SETabView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		1061DC5F1759BC84B9E1D6DADFD38751 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		119EA18C241C0808003EC67B /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
-		119EA18D241C0808003EC67B /* SETabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SETabView.swift; sourceTree = "<group>"; };
-		119EA18E241C0809003EC67B /* SEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SEViewController.swift; sourceTree = "<group>"; };
+		119EA1A6241C23D7003EC67B /* SETabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SETabView.swift; sourceTree = "<group>"; };
+		119EA1A7241C23D7003EC67B /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		119EA1A8241C23D7003EC67B /* SEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SEViewController.swift; sourceTree = "<group>"; };
 		15039EAAB37B08BFFC82C49EDC196282 /* Pods_SETabView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SETabView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		182434E24B559E81C1FC257658B22444 /* SETabView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SETabView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -124,9 +124,9 @@
 		119EA192241C081E003EC67B /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				119EA18C241C0808003EC67B /* Helper.swift */,
-				119EA18D241C0808003EC67B /* SETabView.swift */,
-				119EA18E241C0809003EC67B /* SEViewController.swift */,
+				119EA1A7241C23D7003EC67B /* Helper.swift */,
+				119EA1A6241C23D7003EC67B /* SETabView.swift */,
+				119EA1A8241C23D7003EC67B /* SEViewController.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -394,10 +394,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				119EA19F241C0EEF003EC67B /* SETabView.swift in Sources */,
-				119EA191241C0809003EC67B /* SEViewController.swift in Sources */,
+				119EA1AB241C23D7003EC67B /* SEViewController.swift in Sources */,
+				119EA1A9241C23D7003EC67B /* SETabView.swift in Sources */,
 				5483C6CF464279F70B5B61AD670CE8D7 /* SETabView-dummy.m in Sources */,
-				119EA18F241C0809003EC67B /* Helper.swift in Sources */,
+				119EA1AA241C23D7003EC67B /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

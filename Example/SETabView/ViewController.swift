@@ -25,8 +25,9 @@ class ViewController: SEViewController {
         let secondVC = storyboard.instantiateViewController(withIdentifier: "secondVC")
         let thirdVC = storyboard.instantiateViewController(withIdentifier: "thirdVC")
         let fourthVC = storyboard.instantiateViewController(withIdentifier: "fourthVC")
+        let fifthVC = storyboard.instantiateViewController(withIdentifier: "fifthVC")
         
-        self.viewControllers = [firstVC, secondVC, thirdVC, fourthVC]
+        self.viewControllers = [firstVC, secondVC, thirdVC, fourthVC, fifthVC]
         
     }
 

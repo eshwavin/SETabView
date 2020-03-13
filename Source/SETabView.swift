@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SETabView: UIView {
+public class SETabView: UIView {
     
     // MARK: Properties: Tab
     /// Specifies the current tab index selected
