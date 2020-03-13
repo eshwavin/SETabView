@@ -56,7 +56,7 @@
 		88D5C4303A0ABFA80EB12DA5 /* Pods-SETabView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SETabView_Tests.release.xcconfig"; path = "Target Support Files/Pods-SETabView_Tests/Pods-SETabView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9A2B5C784F390057754DBD46 /* Pods-SETabView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SETabView_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SETabView_Tests/Pods-SETabView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BEF48BA02825ABC8D5206362 /* Pods-SETabView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SETabView_Example.debug.xcconfig"; path = "Target Support Files/Pods-SETabView_Example/Pods-SETabView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C17A9952163870603F032D1B /* SETabView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SETabView.podspec; path = ../SETabView.podspec; sourceTree = "<group>"; };
+		C17A9952163870603F032D1B /* SETabView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SETabView.podspec; path = ../SETabView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

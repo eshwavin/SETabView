@@ -13,20 +13,21 @@ class ViewController: SEViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // setup the view controllers
         self.setViewControllers()
         
     }
     
     private func setViewControllers() {
         
+        // instantiate view controllers
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let firstVC = storyboard.instantiateViewController(withIdentifier: "firstVC")
         let secondVC = storyboard.instantiateViewController(withIdentifier: "secondVC")
         let thirdVC = storyboard.instantiateViewController(withIdentifier: "thirdVC")
         let fourthVC = storyboard.instantiateViewController(withIdentifier: "fourthVC")
         let fifthVC = storyboard.instantiateViewController(withIdentifier: "fifthVC")
-        
+        // assign to the viewControllers variable
         self.viewControllers = [firstVC, secondVC, thirdVC, fourthVC, fifthVC]
         
     }
