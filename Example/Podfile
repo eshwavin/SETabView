@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SETabView_Example' do
+  pod 'SETabView', :path => '../'
+
+  target 'SETabView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
