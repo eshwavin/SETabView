@@ -1,0 +1,6 @@
+framework module Pods_SETabView_Tests {
+  umbrella header "Pods-SETabView_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module SETabView {
+  umbrella header "SETabView-umbrella.h"
+
+  export *
+  module * { export * }
+}

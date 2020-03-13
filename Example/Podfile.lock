@@ -1,0 +1,16 @@
+PODS:
+  - SETabView (0.1.0)
+
+DEPENDENCIES:
+  - SETabView (from `../`)
+
+EXTERNAL SOURCES:
+  SETabView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SETabView: d4e921129bd19e80f6ca7d104ba62f689cc30a02
+
+PODFILE CHECKSUM: bd85a252b66fad279155167c04d6eb3727183d77
+
+COCOAPODS: 1.9.0

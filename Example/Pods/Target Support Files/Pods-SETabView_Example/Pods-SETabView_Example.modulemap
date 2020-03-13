@@ -1,0 +1,6 @@
+framework module Pods_SETabView_Example {
+  umbrella header "Pods-SETabView_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
