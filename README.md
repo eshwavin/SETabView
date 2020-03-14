@@ -116,6 +116,10 @@ override func setAnimationType() {
     self.animationType = .holeBall3 // defaults to .holeBall3
 }
 ```
+## Restrictions
+
+- Max 5 Tabs
+- Tab Bar look cannot be changed once set in `setTabSettings()`
 
 ## Example
 
