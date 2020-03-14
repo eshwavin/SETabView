@@ -13,9 +13,15 @@
 
 #### .holeBall2
 
+<p align="center">
+ <img src=""  >
+</p>
 
 #### .holeBall3
 
+<p align="center">
+ <img src=""  >
+</p>
 
 ## Requirements
 
@@ -68,19 +74,21 @@ class ViewController: SEViewController {
     
     override func viewDidLoad() {
       super.viewDidLoad()
-
+      // set the child View Controllers
       setTabsControllers()
 
     }
 
     private func setViewControllers() {
         
+        // instantiate the child View Controllers
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let firstVC = storyboard.instantiateViewController(withIdentifier: "firstVC")
         let secondVC = storyboard.instantiateViewController(withIdentifier: "secondVC")
         let thirdVC = storyboard.instantiateViewController(withIdentifier: "thirdVC")
         let fourthVC = storyboard.instantiateViewController(withIdentifier: "fourthVC")
         
+        // assign the child View Controllers
         self.viewControllers = [firstVC, secondVC, thirdVC, fourthVC]
         
     }
@@ -107,13 +115,14 @@ class FirstViewController: UIViewController, SETabItem {
 Customise the appearance and animation type of the TabBar by overriding the `setTabSettings()` and `setAnimationType()` functions
 ```
 override func setTabSettings() {
-    // customise tab bar colors (always before setting view controllers)
+
+    // customise tab bar appearance
     SETabView.settings.tabColor = UIColor.black
     SETabView.settings.ballColor = UIColor.black
     SETabView.settings.selectedTabTintColor = UIColor.white
     SETabView.settings.unselectedTabTintColor = UIColor.gray
     
-    // customise animation duration (always before setting view controllers)
+    // customise animation duration
     SETabView.settings.animationDuration = 1.5 // optimal duration = 1.5
 }
 
