@@ -7,7 +7,7 @@
 
 #### .holeBall1
 
-<p align="center" width="273" height="504">
+<p align="center" width="91" height="168">
  <img src="https://github.com/eshwavin/SETabView/blob/master/Gifs/HoleBall1.gif"  >
 </p>
 
