@@ -5,24 +5,6 @@
 
 ## Animations
 
-#### .holeBall1
-
-<p align="center"">
- <img src="https://github.com/eshwavin/SETabView/blob/master/Gifs/HoleBall1.gif">
-</p>
-
-#### .holeBall2
-
-<p align="center" >
- <img src="https://github.com/eshwavin/SETabView/blob/master/Gifs/HoleBall2.gif"  >
-</p>
-
-#### .holeBall3
-
-<p align="center">
- <img src="https://github.com/eshwavin/SETabView/blob/master/Gifs/HoleBall3.gif"  >
-</p>
-
 .holeBall1 | .holeBall2 | .holeBall3
 ---------| --------------|---------|
 <img src="https://github.com/eshwavin/SETabView/blob/master/Gifs/HoleBall1.gif"> | <img src="https://github.com/eshwavin/SETabView/blob/master/Gifs/HoleBall2.gif"> | <img src="https://github.com/eshwavin/SETabView/blob/master/Gifs/HoleBall3.gif">
