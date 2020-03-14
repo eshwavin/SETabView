@@ -11,11 +11,11 @@
 
 ## Requirements
 
-SETabView is written is Swift 5 and is deployed for iOS 11.0 and above. 
+SETabView is written in Swift 5 and is deployed for iOS 11.0 and above. 
 
 ## Integration
 
-#### CocoaPods
+### CocoaPods
 
 SETabView is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -24,7 +24,7 @@ it, simply add the following line to your Podfile:
 pod 'SETabView'
 ```
 
-#### Directly include source files
+### Directly include source files
 
 Download and add the files in the [Source](https://github.com/eshwavin/SETabView/tree/master/Source) folder directly into your Xcode Project. In this case you should **skip** 
 
