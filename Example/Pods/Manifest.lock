@@ -1,5 +1,5 @@
 PODS:
-  - SETabView (0.1.0)
+  - SETabView (1.0.0)
 
 DEPENDENCIES:
   - SETabView (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SETabView: d4e921129bd19e80f6ca7d104ba62f689cc30a02
+  SETabView: f92ed6b3d86187651364f89a1209def164663b72
 
 PODFILE CHECKSUM: bd85a252b66fad279155167c04d6eb3727183d77
 

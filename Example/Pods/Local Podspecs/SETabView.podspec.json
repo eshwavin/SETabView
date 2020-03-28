@@ -1,22 +1,25 @@
 {
   "name": "SETabView",
-  "version": "0.1.0",
-  "summary": "A short description of SETabView.",
-  "description": "TODO: Add long description of the pod here.",
+  "version": "1.0.0",
+  "summary": "SETabView is a custom TabBar with really cool animations",
+  "description": "'SETabView is a TabBar with simple yet beautiful animations that makes your apps look cool!'",
   "homepage": "https://github.com/eshwavin/SETabView",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "eshwavin": "eshwavin@hotmail.com"
+    "eshwavin": "eshwavin@gmail.com"
   },
   "source": {
     "git": "https://github.com/eshwavin/SETabView.git",
-    "tag": "0.1.0"
+    "tag": "1.0.0"
   },
+  "social_media_url": "https://www.instagram.com/eshwavin/",
   "platforms": {
-    "ios": "8.0"
+    "ios": "11.0"
   },
-  "source_files": "SETabView/Classes/**/*"
+  "source_files": "Source/**/*.swift",
+  "swift_versions": "5.0",
+  "swift_version": "5.0"
 }
