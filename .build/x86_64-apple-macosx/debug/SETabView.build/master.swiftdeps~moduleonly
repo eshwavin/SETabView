@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.2 (swiftlang-1103.0.32.1 clang-1103.0.32.29)"
+options: "e9eec284f24003f75bf274f15f857fc3"
+build_time: [1585439293, 618758000]
+inputs:
+  "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/Source/Helper.swift": !dirty [1584121033, 918609883]
+  "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/Source/SETabView.swift": !dirty [1584130950, 394884860]
+  "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/Source/SEViewController.swift": !dirty [1585437721, 912854964]

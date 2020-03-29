@@ -1,0 +1,23 @@
+{
+  "": {
+    "swift-dependencies": "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/master.swiftdeps"
+  },
+  "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/Source/Helper.swift": {
+    "dependencies": "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/Helper.d",
+    "object": "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/Helper.swift.o",
+    "swiftmodule": "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/Helper~partial.swiftmodule",
+    "swift-dependencies": "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/Helper.swiftdeps"
+  },
+  "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/Source/SETabView.swift": {
+    "dependencies": "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/SETabView.d",
+    "object": "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/SETabView.swift.o",
+    "swiftmodule": "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/SETabView~partial.swiftmodule",
+    "swift-dependencies": "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/SETabView.swiftdeps"
+  },
+  "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/Source/SEViewController.swift": {
+    "dependencies": "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/SEViewController.d",
+    "object": "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/SEViewController.swift.o",
+    "swiftmodule": "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/SEViewController~partial.swiftmodule",
+    "swift-dependencies": "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/SEViewController.swiftdeps"
+  }
+}

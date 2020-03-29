@@ -1,0 +1,4 @@
+module SETabView {
+    header "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/SETabView-Swift.h"
+    requires objc
+}

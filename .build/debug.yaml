@@ -1,0 +1,78 @@
+client:
+  name: basic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "SETabView-debug.module": ["<SETabView-debug.module>"]
+  "SETabViewPackageTests-debug.test": ["<SETabViewPackageTests-debug.test>"]
+  "SETabViewTests-debug.module": ["<SETabViewTests-debug.module>"]
+  "main": ["<SETabView-debug.module>"]
+  "test": ["<SETabView-debug.module>","<SETabViewPackageTests-debug.test>","<SETabViewTests-debug.module>"]
+default: "main"
+nodes:
+  "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/Source/":
+    is-directory-structure: true
+  "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/Tests/SETabViewTests/":
+    is-directory-structure: true
+commands:
+  "<SETabView-debug.module>":
+    tool: phony
+    inputs: ["/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/Helper.swift.o","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/SETabView.swift.o","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/SEViewController.swift.o","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.swiftmodule"]
+    outputs: ["<SETabView-debug.module>"]
+
+  "<SETabViewPackageTests-debug.test>":
+    tool: phony
+    inputs: ["/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabViewPackageTests.xctest/Contents/MacOS/SETabViewPackageTests"]
+    outputs: ["<SETabViewPackageTests-debug.test>"]
+
+  "<SETabViewTests-debug.module>":
+    tool: phony
+    inputs: ["/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabViewTests.build/SETabViewTests.swift.o","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabViewTests.build/XCTestManifests.swift.o","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabViewTests.swiftmodule"]
+    outputs: ["<SETabViewTests-debug.module>"]
+
+  "C.SETabView-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/Source/Helper.swift","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/Source/SETabView.swift","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/Source/SEViewController.swift"]
+    outputs: ["/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/Helper.swift.o","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/SETabView.swift.o","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/SEViewController.swift.o","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "SETabView"
+    module-output-path: "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.swiftmodule"
+    import-paths: ["/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build"
+    objects: ["/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/Helper.swift.o","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/SETabView.swift.o","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/SEViewController.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx10.10","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/index/store","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-Onone","-enable-testing","-g","-j4","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-emit-objc-header","-emit-objc-header-path","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/SETabView-Swift.h","-color-diagnostics"]
+    sources: ["/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/Source/Helper.swift","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/Source/SETabView.swift","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/Source/SEViewController.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 4
+
+  "C.SETabViewPackageTests-debug.test":
+    tool: shell
+    inputs: ["/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/Helper.swift.o","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/SETabView.swift.o","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/SEViewController.swift.o","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabViewTests.build/SETabViewTests.swift.o","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabViewTests.build/XCTestManifests.swift.o"]
+    outputs: ["/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabViewPackageTests.xctest/Contents/MacOS/SETabViewPackageTests"]
+    description: "Linking ./.build/x86_64-apple-macosx/debug/SETabViewPackageTests.xctest/Contents/MacOS/SETabViewPackageTests"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug","-o","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabViewPackageTests.xctest/Contents/MacOS/SETabViewPackageTests","-module-name","SETabViewPackageTests","-Xlinker","-bundle","-Xlinker","-rpath","-Xlinker","@loader_path/../../../","@/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabViewPackageTests.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx","-target","x86_64-apple-macosx10.10","-Xlinker","-add_ast_path","-Xlinker","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabViewTests.swiftmodule","-L","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"]
+
+  "C.SETabViewTests-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/Tests/SETabViewTests/SETabViewTests.swift","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/Tests/SETabViewTests/XCTestManifests.swift","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.swiftmodule"]
+    outputs: ["/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabViewTests.build/SETabViewTests.swift.o","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabViewTests.build/XCTestManifests.swift.o","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabViewTests.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "SETabViewTests"
+    module-output-path: "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabViewTests.swiftmodule"
+    import-paths: ["/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabViewTests.build"
+    objects: ["/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabViewTests.build/SETabViewTests.swift.o","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabViewTests.build/XCTestManifests.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx10.10","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/index/store","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-Onone","-enable-testing","-g","-j4","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-color-diagnostics"]
+    sources: ["/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/Tests/SETabViewTests/SETabViewTests.swift","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/Tests/SETabViewTests/XCTestManifests.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 4
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/Source/","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/Tests/SETabViewTests/","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/Package.swift","/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

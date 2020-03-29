@@ -1,0 +1,245 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SETabView"
+provides-nominal:
+- "9SETabViewAAC"
+provides-member:
+- ["9SETabViewAAC", ""]
+provides-dynamic-lookup:
+- "addTabImages"
+- "animationType"
+- "ballLayer"
+- "ballLayerReplica"
+- "ballSize"
+- "bumpPath"
+- "changeTintColor"
+- "createBumpMorph"
+- "createHolePath"
+- "createInvertedPlateauPath"
+- "createRectangularMorphForPlateau"
+- "createRotateBallPaths"
+- "delegate"
+- "heightScalingFactor"
+- "iconSize"
+- "invertedPlateauPath"
+- "itemHeight"
+- "itemWidth"
+- "layoutSubviews"
+- "morphShapeLayer"
+- "moveToSelectedTab"
+- "numberOfTabs"
+- "previousTabIndex"
+- "rectangularMorphPath"
+- "rotateBall"
+- "scaleBall"
+- "sectionHeight"
+- "sectionWidth"
+- "selectedTabIndex"
+- "settings"
+- "setup"
+- "setupFramesForHoleBall1"
+- "setupFramesForHoleBall2"
+- "setupFramesForHoleBall3"
+- "setupTabBarFrames"
+- "setupView"
+- "tabImageLayers"
+- "tabImages"
+- "tabShapeLayer"
+- "touchesBegan"
+- "translateBallLinear"
+- "translateBallTriangular"
+- "translateShapeLayer"
+depends-top-level:
+- !private "!"
+- !private "!="
+- !private "*"
+- !private "+"
+- !private "-"
+- !private "/"
+- !private "=="
+- !private ">"
+- "AnimationTypes"
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- !private "CABasicAnimation"
+- !private "CACurrentMediaTime"
+- !private "CAKeyframeAnimation"
+- "CALayer"
+- !private "CAMediaTimingFunction"
+- !private "CAMediaTimingFunctionName"
+- "CAShapeLayer"
+- "CGFloat"
+- "CGPath"
+- !private "CGPoint"
+- "CGRect"
+- "FloatLiteralType"
+- "Int"
+- "IntegerLiteralType"
+- "NSCoder"
+- !private "NSValue"
+- "SETabSettings"
+- "SETabView"
+- "SETabViewDelegate"
+- "Set"
+- "String"
+- !private "StringLiteralType"
+- !private "UIBezierPath"
+- !private "UIColor"
+- "UIEvent"
+- "UIImage"
+- "UITouch"
+- "UIView"
+- !private "abs"
+- !private "fatalError"
+- !private "floor"
+- !private "seEaseIn"
+- !private "seEaseInOut"
+- !private "seEaseOut"
+depends-member:
+- !private ["s18AdditiveArithmeticP", "init"]
+- ["9SETabView14AnimationTypesO", "holeBall1"]
+- ["9SETabView14AnimationTypesO", "holeBall2"]
+- ["9SETabView14AnimationTypesO", "holeBall3"]
+- !private ["Sz", "init"]
+- !private ["s7CVarArgP", "init"]
+- !private ["SL", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["Se", "init"]
+- !private ["SE", "init"]
+- ["SQ", "holeBall1"]
+- ["SQ", "holeBall2"]
+- ["SQ", "holeBall3"]
+- !private ["SQ", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- ["SH", "holeBall1"]
+- ["SH", "holeBall2"]
+- ["SH", "holeBall3"]
+- !private ["SH", "init"]
+- !private ["Si", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["Sj", "init"]
+- !private ["9SETabView0A8SettingsC", "ballColor"]
+- ["9SETabView0A8SettingsC", "init"]
+- !private ["9SETabView0A8SettingsC", "tabColor"]
+- ["9SETabViewAAC", "AnimationTypes"]
+- ["9SETabViewAAC", "Bool"]
+- !private ["9SETabViewAAC", "CABasicAnimation"]
+- !private ["9SETabViewAAC", "CACurrentMediaTime"]
+- !private ["9SETabViewAAC", "CAKeyframeAnimation"]
+- ["9SETabViewAAC", "CALayer"]
+- !private ["9SETabViewAAC", "CAMediaTimingFunction"]
+- !private ["9SETabViewAAC", "CAMediaTimingFunctionName"]
+- ["9SETabViewAAC", "CAShapeLayer"]
+- ["9SETabViewAAC", "CGFloat"]
+- ["9SETabViewAAC", "CGPath"]
+- !private ["9SETabViewAAC", "CGPoint"]
+- ["9SETabViewAAC", "CGRect"]
+- ["9SETabViewAAC", "Int"]
+- ["9SETabViewAAC", "NSCoder"]
+- !private ["9SETabViewAAC", "NSValue"]
+- ["9SETabViewAAC", "SETabSettings"]
+- !private ["9SETabViewAAC", "SETabView"]
+- ["9SETabViewAAC", "SETabViewDelegate"]
+- ["9SETabViewAAC", "Set"]
+- ["9SETabViewAAC", "String"]
+- !private ["9SETabViewAAC", "UIBezierPath"]
+- !private ["9SETabViewAAC", "UIColor"]
+- ["9SETabViewAAC", "UIEvent"]
+- ["9SETabViewAAC", "UIImage"]
+- ["9SETabViewAAC", "UITouch"]
+- !private ["9SETabViewAAC", "abs"]
+- !private ["9SETabViewAAC", "addTabImages"]
+- ["9SETabViewAAC", "animationType"]
+- !private ["9SETabViewAAC", "backgroundColor"]
+- !private ["9SETabViewAAC", "ballLayer"]
+- !private ["9SETabViewAAC", "ballLayerReplica"]
+- !private ["9SETabViewAAC", "ballSize"]
+- !private ["9SETabViewAAC", "bounds"]
+- !private ["9SETabViewAAC", "bumpPath"]
+- !private ["9SETabViewAAC", "changeTintColor"]
+- !private ["9SETabViewAAC", "createBumpMorph"]
+- !private ["9SETabViewAAC", "createHolePath"]
+- !private ["9SETabViewAAC", "createInvertedPlateauPath"]
+- !private ["9SETabViewAAC", "createRectangularMorphForPlateau"]
+- !private ["9SETabViewAAC", "createRotateBallPaths"]
+- ["9SETabViewAAC", "deinit"]
+- ["9SETabViewAAC", "delegate"]
+- !private ["9SETabViewAAC", "fatalError"]
+- !private ["9SETabViewAAC", "floor"]
+- !private ["9SETabViewAAC", "heightScalingFactor"]
+- !private ["9SETabViewAAC", "invertedPlateauPath"]
+- !private ["9SETabViewAAC", "itemHeight"]
+- !private ["9SETabViewAAC", "itemWidth"]
+- !private ["9SETabViewAAC", "layer"]
+- ["9SETabViewAAC", "layoutSubviews"]
+- !private ["9SETabViewAAC", "morphShapeLayer"]
+- !private ["9SETabViewAAC", "moveToSelectedTab"]
+- !private ["9SETabViewAAC", "numberOfTabs"]
+- !private ["9SETabViewAAC", "previousTabIndex"]
+- !private ["9SETabViewAAC", "rectangularMorphPath"]
+- !private ["9SETabViewAAC", "rotateBall"]
+- !private ["9SETabViewAAC", "scaleBall"]
+- !private ["9SETabViewAAC", "seEaseIn"]
+- !private ["9SETabViewAAC", "seEaseInOut"]
+- !private ["9SETabViewAAC", "seEaseOut"]
+- !private ["9SETabViewAAC", "sectionHeight"]
+- !private ["9SETabViewAAC", "sectionWidth"]
+- ["9SETabViewAAC", "selectedTabIndex"]
+- ["9SETabViewAAC", "settings"]
+- !private ["9SETabViewAAC", "setup"]
+- !private ["9SETabViewAAC", "setupFramesForHoleBall1"]
+- !private ["9SETabViewAAC", "setupFramesForHoleBall2"]
+- !private ["9SETabViewAAC", "setupFramesForHoleBall3"]
+- !private ["9SETabViewAAC", "setupTabBarFrames"]
+- !private ["9SETabViewAAC", "setupView"]
+- !private ["9SETabViewAAC", "tabImageLayers"]
+- !private ["9SETabViewAAC", "tabImages"]
+- !private ["9SETabViewAAC", "tabShapeLayer"]
+- !private ["9SETabViewAAC", "translateBallLinear"]
+- !private ["9SETabViewAAC", "translateBallTriangular"]
+- !private ["9SETabViewAAC", "translateShapeLayer"]
+- !private ["9SETabView0aB8DelegateP", "didSelectTab"]
+- !private ["s10SIMDScalarP", "init"]
+- !private ["SZ", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["Sx", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- "9SETabView14AnimationTypesO"
+- !private "Sz"
+- !private "s7CVarArgP"
+- !private "SL"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s17FixedWidthIntegerP"
+- "SH"
+- !private "Si"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "Sj"
+- "9SETabView0A8SettingsC"
+- "9SETabViewAAC"
+- !private "9SETabView0aB8DelegateP"
+- !private "s10SIMDScalarP"
+- !private "SZ"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/module.modulemap"
+interface-hash: "9ed615a859e3209d166afa9552197e73"

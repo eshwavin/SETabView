@@ -24,6 +24,18 @@ it, simply add the following line to your Podfile:
 pod 'SETabView'
 ```
 
+### Swift Package Manager
+
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler.
+
+Once you have your Swift package set up, adding SETabView as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/eshwavin/SETabView", .upToNextMajor(from: "0.2.0"))
+]
+```
+
 ### Directly include source files
 
 Download and add the files in the [Source](https://github.com/eshwavin/SETabView/tree/master/Source) folder directly into your Xcode Project. In this case you should **skip** 

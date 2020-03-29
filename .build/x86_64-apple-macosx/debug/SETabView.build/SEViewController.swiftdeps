@@ -1,0 +1,187 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SEViewController"
+provides-nominal:
+- "9SETabView16SEViewControllerC"
+provides-member:
+- ["9SETabView16SEViewControllerC", ""]
+provides-dynamic-lookup:
+- "animationType"
+- "bottomFillerView"
+- "containerView"
+- "createConstraints"
+- "didSelectTab"
+- "lastSelectedTabIndex"
+- "moveToViewController"
+- "selectedTabIndex"
+- "setAnimationType"
+- "setTabIcons"
+- "setTabSettings"
+- "setupViews"
+- "tabBar"
+- "viewControllers"
+- "viewDidLoad"
+depends-top-level:
+- !private "!="
+- !private "=="
+- !private ">"
+- "AnimationTypes"
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- !private "FloatLiteralType"
+- "Int"
+- !private "IntegerLiteralType"
+- !private "NSLayoutConstraint"
+- "SETabView"
+- "SETabViewDelegate"
+- "SEViewController"
+- !private "StringLiteralType"
+- !private "UIColor"
+- !private "UIImage"
+- "UIView"
+- "UIViewController"
+- !private "addChild"
+- !private "fatalError"
+depends-member:
+- !private ["9SETabView14AnimationTypesO", "deinit"]
+- !private ["9SETabView14AnimationTypesO", "holeBall3"]
+- !private ["s28CustomDebugStringConvertibleP", "animationType"]
+- !private ["s28CustomDebugStringConvertibleP", "delegate"]
+- !private ["s28CustomDebugStringConvertibleP", "holeBall3"]
+- !private ["s28CustomDebugStringConvertibleP", "selectedTabIndex"]
+- !private ["s28CustomDebugStringConvertibleP", "tabImages"]
+- !private ["s28CustomDebugStringConvertibleP", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["s17CustomReflectableP", "animationType"]
+- !private ["s17CustomReflectableP", "delegate"]
+- !private ["s17CustomReflectableP", "holeBall3"]
+- !private ["s17CustomReflectableP", "selectedTabIndex"]
+- !private ["s17CustomReflectableP", "tabImages"]
+- !private ["s17CustomReflectableP", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["Se", "animationType"]
+- !private ["Se", "delegate"]
+- !private ["Se", "holeBall3"]
+- !private ["Se", "selectedTabIndex"]
+- !private ["Se", "tabImages"]
+- !private ["Se", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["SE", "animationType"]
+- !private ["SE", "delegate"]
+- !private ["SE", "holeBall3"]
+- !private ["SE", "selectedTabIndex"]
+- !private ["SE", "tabImages"]
+- !private ["SE", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["SQ", "animationType"]
+- !private ["SQ", "delegate"]
+- !private ["SQ", "holeBall3"]
+- !private ["SQ", "selectedTabIndex"]
+- !private ["SQ", "tabImages"]
+- !private ["SQ", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["s23ExpressibleByNilLiteralP", "animationType"]
+- !private ["s23ExpressibleByNilLiteralP", "delegate"]
+- !private ["s23ExpressibleByNilLiteralP", "holeBall3"]
+- !private ["s23ExpressibleByNilLiteralP", "selectedTabIndex"]
+- !private ["s23ExpressibleByNilLiteralP", "tabImages"]
+- !private ["s23ExpressibleByNilLiteralP", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["SH", "animationType"]
+- !private ["SH", "delegate"]
+- !private ["SH", "holeBall3"]
+- !private ["SH", "selectedTabIndex"]
+- !private ["SH", "tabImages"]
+- !private ["SH", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["Sq", "animationType"]
+- !private ["Sq", "delegate"]
+- !private ["Sq", "holeBall3"]
+- !private ["Sq", "selectedTabIndex"]
+- !private ["Sq", "tabImages"]
+- !private ["Sq", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["9SETabView0A8SettingsC", "animationDuration"]
+- !private ["9SETabView0A8SettingsC", "ballColor"]
+- !private ["9SETabView0A8SettingsC", "selectedTabTintColor"]
+- !private ["9SETabView0A8SettingsC", "tabColor"]
+- !private ["9SETabView0A8SettingsC", "unselectedTabTintColor"]
+- !private ["9SETabViewAAC", "animationType"]
+- !private ["9SETabViewAAC", "delegate"]
+- ["9SETabViewAAC", "init"]
+- !private ["9SETabViewAAC", "selectedTabIndex"]
+- !private ["9SETabViewAAC", "settings"]
+- !private ["9SETabViewAAC", "tabImages"]
+- !private ["9SETabViewAAC", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["9SETabView0aB8DelegateP", "NSLayoutConstraint"]
+- !private ["9SETabView0aB8DelegateP", "SETabView"]
+- !private ["9SETabView0aB8DelegateP", "UIColor"]
+- !private ["9SETabView0aB8DelegateP", "UIImage"]
+- ["9SETabView0aB8DelegateP", "UIView"]
+- ["9SETabView0aB8DelegateP", "UIViewController"]
+- ["9SETabView0aB8DelegateP", ""]
+- !private ["9SETabView0aB8DelegateP", "addChild"]
+- !private ["9SETabView0aB8DelegateP", "animationType"]
+- !private ["9SETabView0aB8DelegateP", "bottomFillerView"]
+- !private ["9SETabView0aB8DelegateP", "children"]
+- !private ["9SETabView0aB8DelegateP", "containerView"]
+- !private ["9SETabView0aB8DelegateP", "createConstraints"]
+- ["9SETabView0aB8DelegateP", "didSelectTab"]
+- !private ["9SETabView0aB8DelegateP", "fatalError"]
+- !private ["9SETabView0aB8DelegateP", "lastSelectedTabIndex"]
+- !private ["9SETabView0aB8DelegateP", "moveToViewController"]
+- !private ["9SETabView0aB8DelegateP", "selectedTabIndex"]
+- !private ["9SETabView0aB8DelegateP", "setAnimationType"]
+- !private ["9SETabView0aB8DelegateP", "setTabIcons"]
+- !private ["9SETabView0aB8DelegateP", "setTabSettings"]
+- !private ["9SETabView0aB8DelegateP", "setupViews"]
+- !private ["9SETabView0aB8DelegateP", "tabBar"]
+- !private ["9SETabView0aB8DelegateP", "view"]
+- !private ["9SETabView0aB8DelegateP", "viewControllers"]
+- ["9SETabView16SEViewControllerC", "AnimationTypes"]
+- ["9SETabView16SEViewControllerC", "Int"]
+- !private ["9SETabView16SEViewControllerC", "NSLayoutConstraint"]
+- ["9SETabView16SEViewControllerC", "SETabView"]
+- !private ["9SETabView16SEViewControllerC", "UIColor"]
+- !private ["9SETabView16SEViewControllerC", "UIImage"]
+- ["9SETabView16SEViewControllerC", "UIView"]
+- ["9SETabView16SEViewControllerC", "UIViewController"]
+- !private ["9SETabView16SEViewControllerC", "addChild"]
+- ["9SETabView16SEViewControllerC", "animationType"]
+- !private ["9SETabView16SEViewControllerC", "bottomFillerView"]
+- !private ["9SETabView16SEViewControllerC", "children"]
+- !private ["9SETabView16SEViewControllerC", "containerView"]
+- !private ["9SETabView16SEViewControllerC", "createConstraints"]
+- ["9SETabView16SEViewControllerC", "deinit"]
+- ["9SETabView16SEViewControllerC", "didSelectTab"]
+- !private ["9SETabView16SEViewControllerC", "fatalError"]
+- ["9SETabView16SEViewControllerC", "init"]
+- !private ["9SETabView16SEViewControllerC", "lastSelectedTabIndex"]
+- !private ["9SETabView16SEViewControllerC", "moveToViewController"]
+- !private ["9SETabView16SEViewControllerC", "selectedTabIndex"]
+- ["9SETabView16SEViewControllerC", "setAnimationType"]
+- !private ["9SETabView16SEViewControllerC", "setTabIcons"]
+- ["9SETabView16SEViewControllerC", "setTabSettings"]
+- !private ["9SETabView16SEViewControllerC", "setupViews"]
+- !private ["9SETabView16SEViewControllerC", "tabBar"]
+- !private ["9SETabView16SEViewControllerC", "view"]
+- !private ["9SETabView16SEViewControllerC", "viewControllers"]
+- ["9SETabView16SEViewControllerC", "viewDidLoad"]
+- !private ["s21_ObjectiveCBridgeableP", "animationType"]
+- !private ["s21_ObjectiveCBridgeableP", "delegate"]
+- !private ["s21_ObjectiveCBridgeableP", "holeBall3"]
+- !private ["s21_ObjectiveCBridgeableP", "selectedTabIndex"]
+- !private ["s21_ObjectiveCBridgeableP", "tabImages"]
+- !private ["s21_ObjectiveCBridgeableP", "translatesAutoresizingMaskIntoConstraints"]
+depends-nominal:
+- !private "9SETabView14AnimationTypesO"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- !private "Se"
+- !private "SE"
+- !private "SQ"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "SH"
+- !private "Sq"
+- !private "9SETabView0A8SettingsC"
+- "9SETabViewAAC"
+- "9SETabView0aB8DelegateP"
+- "9SETabView16SEViewControllerC"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/module.modulemap"
+interface-hash: "a2080074f58a363977378e3820f19cfb"

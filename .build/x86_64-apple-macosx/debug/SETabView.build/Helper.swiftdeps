@@ -1,0 +1,89 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SETabViewDelegate"
+- "SETabItem"
+- "SETabSettings"
+- "AnimationTypes"
+- "seEaseIn"
+- "seEaseOut"
+- "seEaseInOut"
+provides-nominal:
+- "9SETabView0aB8DelegateP"
+- "9SETabView0A4ItemP"
+- "9SETabView0A8SettingsC"
+- "9SETabView14AnimationTypesO"
+provides-member:
+- ["9SETabView0aB8DelegateP", ""]
+- ["9SETabView0A4ItemP", ""]
+- ["9SETabView0A8SettingsC", ""]
+- ["9SETabView14AnimationTypesO", ""]
+provides-dynamic-lookup:
+- "animationDuration"
+- "ballAnimationDuration"
+- "ballColor"
+- "changeTintColorAnimationDuration"
+- "scaleBallDelayTime"
+- "selectedTabTintColor"
+- "switchTabAnimationDuration"
+- "tabColor"
+- "unselectedTabTintColor"
+depends-top-level:
+- !private "*"
+- "=="
+- "AnimationTypes"
+- "AnyObject"
+- "CAMediaTimingFunction"
+- "Double"
+- "FloatLiteralType"
+- "Int"
+- !private "IntegerLiteralType"
+- "SETabItem"
+- "SETabSettings"
+- "SETabViewDelegate"
+- "UIColor"
+- "UIImage"
+depends-member:
+- ["9SETabView14AnimationTypesO", "=="]
+- ["9SETabView14AnimationTypesO", "__derived_enum_equals"]
+- ["9SETabView14AnimationTypesO", "_rawHashValue"]
+- ["9SETabView14AnimationTypesO", "deinit"]
+- ["9SETabView14AnimationTypesO", "hash"]
+- ["9SETabView14AnimationTypesO", "hashValue"]
+- ["9SETabView14AnimationTypesO", "holeBall1"]
+- ["9SETabView14AnimationTypesO", "holeBall2"]
+- ["9SETabView14AnimationTypesO", "holeBall3"]
+- ["SQ", "=="]
+- ["SQ", ""]
+- ["SQ", "_rawHashValue"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- ["SH", "=="]
+- ["SH", ""]
+- ["SH", "_rawHashValue"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- !private ["s6HasherV", "combine"]
+- ["9SETabView0A4ItemP", "UIImage"]
+- ["9SETabView0A8SettingsC", "Double"]
+- ["9SETabView0A8SettingsC", "UIColor"]
+- ["9SETabView0A8SettingsC", "animationDuration"]
+- ["9SETabView0A8SettingsC", "ballAnimationDuration"]
+- ["9SETabView0A8SettingsC", "changeTintColorAnimationDuration"]
+- ["9SETabView0A8SettingsC", "deinit"]
+- ["9SETabView0A8SettingsC", "init"]
+- ["9SETabView0A8SettingsC", "scaleBallDelayTime"]
+- ["9SETabView0A8SettingsC", "switchTabAnimationDuration"]
+- ["9SETabView0aB8DelegateP", "Int"]
+- ["9SETabView0aB8DelegateP", "didSelectTab"]
+depends-nominal:
+- "9SETabView14AnimationTypesO"
+- "SQ"
+- "SH"
+- !private "s6HasherV"
+- "9SETabView0A4ItemP"
+- "9SETabView0A8SettingsC"
+- "9SETabView0aB8DelegateP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/eshwavin/Documents/App Dev 2019/Custom Tab Bar/Pod/SETabView/.build/x86_64-apple-macosx/debug/SETabView.build/module.modulemap"
+interface-hash: "12aa21835f8bfa2ac5b368eda204cd68"

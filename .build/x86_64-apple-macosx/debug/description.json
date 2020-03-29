@@ -1,0 +1,25 @@
+{
+  "allExecutables" : [
+
+  ],
+  "builtTestProducts" : [
+    {
+      "packageName" : "SETabView",
+      "productName" : "SETabViewPackageTests",
+      "testBinary" : "\/Users\/eshwavin\/Documents\/App Dev 2019\/Custom Tab Bar\/Pod\/SETabView\/.build\/x86_64-apple-macosx\/debug\/SETabViewPackageTests.xctest\/Contents\/MacOS\/SETabViewPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "rootExecutables" : [
+
+  ],
+  "swiftTargetMap" : {
+    "C.SETabView-debug.module" : "SETabView",
+    "C.SETabViewTests-debug.module" : "SETabViewTests"
+  },
+  "testDiscoveryCommands" : {
+
+  }
+}
