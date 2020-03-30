@@ -11,7 +11,9 @@
 
 ## Requirements
 
-SETabView is written in Swift 5 and is deployed for iOS 11.0 and above. 
+- Swift 5+
+- iOS 11.0+
+- Swift tools version 5.0+ (For Swift Package Manager)
 
 ## Integration
 
@@ -48,7 +50,7 @@ in the usage instructions.
 
 ## Usage
 
-Import `VCTabView` into the View Controller and any child View Controllers
+Import `VCTabView` into the parent ViewController and any child View Controllers
 
 ```
 import SETabView
@@ -65,7 +67,7 @@ class ViewController: SEViewController {
 }
 ```
 
-In  `viewDidLoad` set the child View Controllers.
+In  `viewDidLoad` of the parent ViewController, set the child ViewControllers.
 
 ```
 class ViewController: SEViewController {
@@ -73,7 +75,7 @@ class ViewController: SEViewController {
     override func viewDidLoad() {
       super.viewDidLoad()
       // set the child View Controllers
-      setTabsControllers()
+      setViewControllers()
 
     }
 
@@ -93,7 +95,7 @@ class ViewController: SEViewController {
    
 }
 ```
-The child View Controllers need to conform to the `SETabItem` protocol
+The child ViewControllers need to conform to the `SETabItem` protocol
 
 ```
 class FirstViewController: UIViewController, SETabItem {
@@ -110,7 +112,7 @@ class FirstViewController: UIViewController, SETabItem {
 
 ## Customization
 
-Customise the appearance and animation type of the TabBar by overriding the `setTabSettings()` and `setAnimationType()` functions
+Customise the appearance and animation type of the TabBar by overriding the `setTabSettings()` and `setAnimationType()` functions in the parent ViewController
 ```
 override func setTabSettings() {
 
