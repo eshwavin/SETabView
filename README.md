@@ -26,6 +26,12 @@ it, simply add the following line to your Podfile:
 pod 'SETabView'
 ```
 
+In case the latest version (0.3.0) is not the one being installed, update the pod.
+
+```
+pod update 'SETabView'
+```
+
 ### Swift Package Manager
 
 The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler.
