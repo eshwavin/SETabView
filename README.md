@@ -110,6 +110,12 @@ class FirstViewController: UIViewController, SETabItem {
 }
 ```
 
+The selected tab can be changed programmatically
+
+```
+self.selectedTabIndex = 3
+```
+
 ## Customization
 
 Customise the appearance and animation type of the TabBar by overriding the `setTabSettings()` and `setAnimationType()` functions in the parent ViewController
@@ -130,6 +136,7 @@ override func setAnimationType() {
     self.animationType = .holeBall3 // defaults to .holeBall3
 }
 ```
+
 ## Restrictions
 
 - Max 5 Tabs

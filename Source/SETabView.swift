@@ -87,7 +87,8 @@ public class SETabView: UIView {
     
     
     // MARK: Properties: Misc
-    private var setup = false
+    public var setup = false
+    public var closureAfterSetup: (() -> Void)?
     
     // MARK: Functions: Init
     
@@ -108,6 +109,7 @@ public class SETabView: UIView {
         if !self.setup {
             self.setupTabBarFrames()
             self.setup = true
+            self.closureAfterSetup?()
         }
         
     }

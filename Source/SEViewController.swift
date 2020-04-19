@@ -13,13 +13,25 @@ open class SEViewController: UIViewController {
     // MARK: Properties: TabBar
     private var lastSelectedTabIndex: Int?
     
-    private var selectedTabIndex: Int {
+    public var selectedTabIndex: Int {
         get {
             return self.tabBar.selectedTabIndex
         }
         set {
-            self.tabBar.selectedTabIndex = newValue
-            self.moveToViewController(at: newValue)
+            
+            if self.viewControllers == nil {
+                fatalError("Cannot select a tab before setting view controllers")
+            }
+            
+            self.tabBar.closureAfterSetup = { [weak self] in
+                self?.tabBar.selectedTabIndex = newValue
+                self?.moveToViewController(at: newValue)
+            }
+            if (self.tabBar.setup) {
+                self.tabBar.selectedTabIndex = newValue
+                self.moveToViewController(at: newValue)
+            }
+            
         }
     }
     

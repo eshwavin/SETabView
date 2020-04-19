@@ -30,6 +30,9 @@ class ViewController: SEViewController {
         // assign to the viewControllers variable
         self.viewControllers = [firstVC, secondVC, thirdVC, fourthVC, fifthVC]
         
+        // change the selected tab programmatically
+        self.selectedTabIndex = 3
+        
     }
 
     override func setTabSettings() {
