@@ -48,7 +48,7 @@ dependencies: [
 
 Download and add the files in the [Source](https://github.com/eshwavin/SETabView/tree/master/Source) folder directly into your Xcode Project. In this case you should **skip** 
 
-```
+```swift
 import SETabView
 ```
 
@@ -58,12 +58,12 @@ in the usage instructions.
 
 Import `VCTabView` into the parent ViewController and any child View Controllers
 
-```
+```swift
 import SETabView
 ```
 
 Inherit the `SEViewController` class in the parent ViewController
-```
+```swift
 class ViewController: SEViewController {
 
    override func viewDidLoad() {
@@ -75,7 +75,7 @@ class ViewController: SEViewController {
 
 In  `viewDidLoad` of the parent ViewController, set the child ViewControllers.
 
-```
+```swift
 class ViewController: SEViewController {
     
     override func viewDidLoad() {
@@ -103,7 +103,7 @@ class ViewController: SEViewController {
 ```
 The child ViewControllers need to conform to the `SETabItem` protocol
 
-```
+```swift
 class FirstViewController: UIViewController, SETabItem {
 
     var tabImage: UIImage? {
@@ -118,14 +118,14 @@ class FirstViewController: UIViewController, SETabItem {
 
 The selected tab can be changed programmatically
 
-```
+```swift
 self.selectedTabIndex = 3
 ```
 
 ## Customization
 
 Customise the appearance and animation type of the TabBar by overriding the `setTabSettings()` and `setAnimationType()` functions in the parent ViewController
-```
+```swift
 override func setTabSettings() {
 
     // customise tab bar appearance
