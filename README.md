@@ -149,4 +149,5 @@ SETabView is available under the MIT license. See the LICENSE file for more info
 ## Acknowledgement
 
 [Animation Inspiration](https://www.behance.net/gallery/79473185/25-Animated-Tab-Bar-Designs-for-Inspiration)
+
 [Icons](https://www.flaticon.com/authors/nikita-golubev)
