@@ -39,6 +39,7 @@
 		119EA197241C0AAC003EC67B /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		119EA199241C0AB9003EC67B /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		119EA19B241C0AC5003EC67B /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
+		11AD704424E4866E003E4AE9 /* README_olderVersions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README_olderVersions.md; path = ../README_olderVersions.md; sourceTree = "<group>"; };
 		1847A3E4A689E6C0F5EA79CA /* Pods-SETabView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SETabView_Example.release.xcconfig"; path = "Target Support Files/Pods-SETabView_Example/Pods-SETabView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		1C12BC2AC7B911A19F454458 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		388AC245E4FA04197310FA28 /* Pods_SETabView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SETabView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +158,7 @@
 			children = (
 				C17A9952163870603F032D1B /* SETabView.podspec */,
 				1C12BC2AC7B911A19F454458 /* README.md */,
+				11AD704424E4866E003E4AE9 /* README_olderVersions.md */,
 				62F086DCBAEC6AEA1924F153 /* LICENSE */,
 			);
 			name = "Podspec Metadata";

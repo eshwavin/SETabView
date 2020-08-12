@@ -54,15 +54,15 @@ import SETabView
 
 in the usage instructions.
 
-## Usage and Customization
+## Usage
 
-Import `SETabView` into the parent view controller and any child view controllers
+Import `VCTabView` into the parent ViewController and any child View Controllers
 
 ```swift
 import SETabView
 ```
 
-Inherit the `SEViewController` class in the parent view controller
+Inherit the `SEViewController` class in the parent ViewController
 ```swift
 class ViewController: SEViewController {
 
@@ -73,42 +73,35 @@ class ViewController: SEViewController {
 }
 ```
 
-In  `viewDidLoad` of the parent view controller, customise your tab bar look and set the child view controllers. 
-
-Set the view controllers using `setViewControllers(_ viewControllers: [UIViewController], initialSelectedTabIndex: Int, animationType: AnimationType)` method.
-
-Customise the look by calling `setTabSettings(tabColor: UIColor, ballColor: UIColor, selectedTabTintColor: UIColor, deselectedTabTintColor: UIColor, animationDuration: Double)` method.
-
-**Make sure to call `setTabSettings` *before* setting your view controllers for the customisation to apply**
+In  `viewDidLoad` of the parent ViewController, set the child ViewControllers.
 
 ```swift
 class ViewController: SEViewController {
     
     override func viewDidLoad() {
       super.viewDidLoad()
-      
-      // set tab bar look
-      setTabSettings(tabColor: UIColor.black, ballColor: UIColor.black, selectedTabTintColor: UIColor.white, deselectedTabTintColor: UIColor.gray, animationDuration: 1)
-      
-      // set the viwe controllers
-      setViewControllers(getViewControllers(), initialSelectedTabIndex: 0, animationType: .holeBall3)
+      // set the child View Controllers
+      setViewControllers()
 
     }
 
-    private func getViewControllers() -> [UIViewController] {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    private func setViewControllers() {
         
-        return [
-            storyboard.instantiateViewController(withIdentifier: "firstVC"),
-            storyboard.instantiateViewController(withIdentifier: "secondVC"),
-            storyboard.instantiateViewController(withIdentifier: "thirdVC"),
-            storyboard.instantiateViewController(withIdentifier: "fourthVC"),
-            storyboard.instantiateViewController(withIdentifier: "fifthVC")
-        ]
-    }   
+        // instantiate the child View Controllers
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let firstVC = storyboard.instantiateViewController(withIdentifier: "firstVC")
+        let secondVC = storyboard.instantiateViewController(withIdentifier: "secondVC")
+        let thirdVC = storyboard.instantiateViewController(withIdentifier: "thirdVC")
+        let fourthVC = storyboard.instantiateViewController(withIdentifier: "fourthVC")
+        
+        // assign the child View Controllers
+        self.viewControllers = [firstVC, secondVC, thirdVC, fourthVC]
+        
+    }
+   
 }
 ```
-The child view controllers need to conform to the `SETabItem` protocol. Using `tabImage` return the image you want as the icon for the tab for that view controller.
+The child ViewControllers need to conform to the `SETabItem` protocol
 
 ```swift
 class FirstViewController: UIViewController, SETabItem {
@@ -127,6 +120,27 @@ The selected tab can be changed programmatically
 
 ```swift
 self.selectedTabIndex = 3
+```
+
+## Customization
+
+Customise the appearance and animation type of the TabBar by overriding the `setTabSettings()` and `setAnimationType()` functions in the parent ViewController
+```swift
+override func setTabSettings() {
+
+    // customise tab bar appearance
+    SETabView.settings.tabColor = UIColor.black
+    SETabView.settings.ballColor = UIColor.black
+    SETabView.settings.selectedTabTintColor = UIColor.white
+    SETabView.settings.unselectedTabTintColor = UIColor.gray
+    
+    // customise animation duration
+    SETabView.settings.animationDuration = 1.5 // optimal duration = 1.5
+}
+
+override func setAnimationType() {
+    self.animationType = .holeBall3 // defaults to .holeBall3
+}
 ```
 
 ## Restrictions
@@ -149,4 +163,5 @@ SETabView is available under the MIT license. See the LICENSE file for more info
 ## Acknowledgement
 
 [Animation Inspiration](https://www.behance.net/gallery/79473185/25-Animated-Tab-Bar-Designs-for-Inspiration)
+
 [Icons](https://www.flaticon.com/authors/nikita-golubev)
