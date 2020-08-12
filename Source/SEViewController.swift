@@ -148,7 +148,7 @@ open class SEViewController: UIViewController {
         constraints.append(bottomFillerView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor))
         constraints.append(bottomFillerView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor))
         constraints.append(bottomFillerView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor))
-        constraints.append(bottomFillerView.topAnchor.constraint(equalTo: view.bottomAnchor, constant: -10))
+        constraints.append(bottomFillerView.topAnchor.constraint(equalTo: tabBar.bottomAnchor, constant: -10))
         
         // activate constraints
         constraints.forEach {
