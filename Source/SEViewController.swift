@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SEViewController.swift
 //  SETabViewControl
 //
 //  Created by Srivinayak Chaitanya Eshwa on 15/02/20.
@@ -12,22 +12,21 @@ open class SEViewController: UIViewController {
     
     // MARK: Properties: TabBar
     private var lastSelectedTabIndex: Int?
-    
+    /// the index of the view controller associated with the currently selected tab item
     public var selectedTabIndex: Int {
         get {
-            return self.tabBar.selectedTabIndex
+            return tabBar.selectedTabIndex
         }
         set {
-            
-            if self.viewControllers == nil {
-                fatalError("Cannot select a tab before setting view controllers")
+            guard let viewControllers = viewControllers, newValue < viewControllers.count else {
+                fatalError("Selected index out of bounds")
             }
             
             self.tabBar.closureAfterSetup = { [weak self] in
                 self?.tabBar.selectedTabIndex = newValue
                 self?.moveToViewController(at: newValue)
             }
-            if (self.tabBar.setup) {
+            if (self.tabBar.isSetup) {
                 self.tabBar.selectedTabIndex = newValue
                 self.moveToViewController(at: newValue)
             }
@@ -36,25 +35,12 @@ open class SEViewController: UIViewController {
     }
     
     // MARK: Properties: Views/View Controllers
-    private var tabBar: SETabView!
+    private var tabBar: AnimatedTabView!
     private var containerView: UIView! // view to contain the views of ViewControllers
     private var bottomFillerView: UIView! // view to fill the space between home control and safe area
-    /// specifies the animation type
-    public var animationType: AnimationTypes? {
-        willSet {
-            if animationType != nil {
-                fatalError("Cannot change tab bar animation once set")
-            }
-            if self.viewControllers == nil {
-                fatalError("Set viewControllers property before setting animationType")
-            }
-        }
-        didSet {
-            self.tabBar.animationType = self.animationType!
-        }
-    }
+    private var animationType: AnimationType = .holeBall1 // animation type
     
-    public var viewControllers: [UIViewController]? = nil {
+    private var viewControllers: [UIViewController]? = nil {
         willSet {
             if viewControllers != nil {
                 fatalError("View Controllers cannot be set multiple times")
@@ -63,13 +49,12 @@ open class SEViewController: UIViewController {
         didSet {
             if viewControllers!.count > 5 {
                 fatalError("Cannot handle more than 5 tabs as of now")
-            }
-            else {
+            } else if viewControllers!.count == 0 {
+                fatalError("Must have at least one View Controller embedded in TabBar")
+            } else {
                 viewControllers?.forEach(addChild(_:))
                 self.setupViews()
                 self.setTabIcons()
-                self.setAnimationType()
-                self.selectedTabIndex = 0
                 
             }
         }
@@ -79,76 +64,91 @@ open class SEViewController: UIViewController {
     
     override open func viewDidLoad() {
         super.viewDidLoad()
-        self.setTabSettings()
+    }
+    
+    // MARK: Setup
+    
+    /// Setup the TabBar along with animation behaviour
+    /// - Parameters:
+    ///   - viewControllers: The embedded view controllers of the tab bar
+    ///   - initialSelectedTabIndex: The initial view controller to display on loading app, default value is 0
+    ///   - animationType: The type of animation of the tab bar, default value is holeBall1
+    public func setViewControllers(_ viewControllers: [UIViewController], initialSelectedTabIndex: Int = 0, animationType: AnimationType = .holeBall1) {
+        
+        guard initialSelectedTabIndex < viewControllers.count else {
+            fatalError("initialSelectedIndex out of bounds")
+        }
+        
+        self.animationType = animationType
+        self.viewControllers = viewControllers
+        self.selectedTabIndex = initialSelectedTabIndex
+    }
+    
+    /// Change the default look and animation duration of the SETabView
+    /// - Parameters:
+    ///   - tabColor: The color of the tab bar. Default value is UIColor.black
+    ///   - ballColor: The color of the ball. Default value is UIColor.black
+    ///   - selectedTabTintColor: The tint of the tab item when selected. Default value is UIColor.white
+    ///   - deselectedTabTintColor: The tint of the tab item when selected. Default value is UIColor.gray
+    ///   - animationDuration: The duration of the entire tab switching animation. Default value is 1.5
+    public func setTabSettings(tabColor: UIColor, ballColor: UIColor, selectedTabTintColor: UIColor, deselectedTabTintColor: UIColor, animationDuration: Double) {
+        
+        guard viewControllers == nil else {
+            print("Please set settings before setting view controllers. Changes made afterwards will not be applied")
+            return
+        }
+        
+        SETabSettings.current.tabColor = tabColor
+        SETabSettings.current.ballColor = ballColor
+        SETabSettings.current.selectedTabTintColor = selectedTabTintColor
+        SETabSettings.current.deselectedTabTintColor = deselectedTabTintColor
+        SETabSettings.current.animationDuration = animationDuration
     }
     
     // MARK: Setup TabBar and View Controllers
     
-    /// modifies the look of the VCTabBar
-    open func setTabSettings() {
-        SETabView.settings.tabColor = UIColor.white
-        SETabView.settings.ballColor = UIColor.white
-        SETabView.settings.selectedTabTintColor = UIColor.black
-        SETabView.settings.unselectedTabTintColor = UIColor.gray
-        SETabView.settings.animationDuration = 1
-    }
-    
-    /// sets the type of animation of the VCTabBar
-    open func setAnimationType() {
-        self.animationType = .holeBall3
-    }
-    
     private func setupViews() {
-        self.containerView = UIView()
-        self.view.addSubview(self.containerView)
+        containerView = UIView()
+        view.addSubview(containerView)
         
-        self.tabBar = SETabView()
-        self.tabBar.delegate = self
-        self.view.addSubview(self.tabBar)
+        tabBar = animationType.tabView
         
-        self.bottomFillerView = UIView()
-        self.bottomFillerView.backgroundColor = SETabView.settings.tabColor
-        self.view.addSubview(self.bottomFillerView)
+        tabBar.delegate = self
+        view.addSubview(tabBar)
         
-        self.createConstraints()
+        bottomFillerView = UIView()
+        bottomFillerView.backgroundColor = SETabSettings.current.tabColor
+        view.addSubview(bottomFillerView)
+        
+        createConstraints()
     }
     
     private func createConstraints() {
         
-        self.containerView.translatesAutoresizingMaskIntoConstraints = false
-        self.tabBar.translatesAutoresizingMaskIntoConstraints = false
-        self.bottomFillerView.translatesAutoresizingMaskIntoConstraints = false
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+        tabBar.translatesAutoresizingMaskIntoConstraints = false
+        bottomFillerView.translatesAutoresizingMaskIntoConstraints = false
         
         var constraints = [NSLayoutConstraint]()
         
         
-        // containter view constraints
-        if #available(iOS 11.0, *) {
-            constraints.append(self.containerView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor))
-        }
-        else {
-            constraints.append(self.containerView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor))
-        }
-        constraints.append(self.containerView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor))
-        constraints.append(self.containerView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor))
-        constraints.append(self.containerView.topAnchor.constraint(equalTo: self.view.topAnchor))
+        // container view constraints
+        constraints.append(containerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor))
+        constraints.append(containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor))
+        constraints.append(containerView.leadingAnchor.constraint(equalTo: view.leadingAnchor))
+        constraints.append(containerView.topAnchor.constraint(equalTo: view.topAnchor))
         
         // tabBar constraints
-        if #available(iOS 11.0, *) {
-            constraints.append(self.tabBar.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor))
-        }
-        else {
-            constraints.append(self.tabBar.bottomAnchor.constraint(equalTo: self.view.bottomAnchor))
-        }
-        constraints.append(self.tabBar.trailingAnchor.constraint(equalTo: self.view.trailingAnchor))
-        constraints.append(self.tabBar.leadingAnchor.constraint(equalTo: self.view.leadingAnchor))
-        constraints.append(self.tabBar.heightAnchor.constraint(equalToConstant: 60))
+        constraints.append(tabBar.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor))
+        constraints.append(tabBar.trailingAnchor.constraint(equalTo: view.trailingAnchor))
+        constraints.append(tabBar.leadingAnchor.constraint(equalTo: view.leadingAnchor))
+        constraints.append(tabBar.heightAnchor.constraint(equalToConstant: 60))
         
         // bottom filler view constraints
-        constraints.append(self.bottomFillerView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor))
-        constraints.append(self.bottomFillerView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor))
-        constraints.append(self.bottomFillerView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor))
-        constraints.append(self.bottomFillerView.topAnchor.constraint(equalTo: self.tabBar.bottomAnchor))
+        constraints.append(bottomFillerView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor))
+        constraints.append(bottomFillerView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor))
+        constraints.append(bottomFillerView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor))
+        constraints.append(bottomFillerView.topAnchor.constraint(equalTo: view.bottomAnchor, constant: -10))
         
         // activate constraints
         constraints.forEach {
@@ -158,7 +158,7 @@ open class SEViewController: UIViewController {
     
     private func setTabIcons() {
         
-        self.tabBar.tabImages = self.children.compactMap({ (viewController) -> UIImage? in
+        tabBar.tabImages = children.compactMap({ (viewController) -> UIImage? in
             var tabItem: SETabItem!
             if let controller = (viewController as? UINavigationController)?.topViewController as? SETabItem {
                 tabItem = controller
@@ -167,7 +167,7 @@ open class SEViewController: UIViewController {
                 tabItem = controller
             }
             else {
-                fatalError("View Controller must implement VCTabItem Protocol")
+                fatalError("View Controller must implement SETabItem Protocol")
             }
             return tabItem.tabImage
         })
@@ -193,7 +193,7 @@ open class SEViewController: UIViewController {
             newView?.frame = self.containerView.bounds
         }
         
-        self.lastSelectedTabIndex = index
+        lastSelectedTabIndex = index
         
     }
     
@@ -201,6 +201,10 @@ open class SEViewController: UIViewController {
 
 extension SEViewController: SETabViewDelegate {
     public func didSelectTab(at index: Int) {
+        
+        guard let viewControllers = viewControllers,
+            index >= 0 && index < viewControllers.count else { return }
+        
         self.selectedTabIndex = index
     }
 }
