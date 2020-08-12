@@ -26,7 +26,7 @@ it, simply add the following line to your Podfile:
 pod 'SETabView'
 ```
 
-In case the latest version (0.3.0) is not the one being installed, update the pod.
+In case the latest version (1.1.0) is not the one being installed, update the pod.
 
 ```
 pod update 'SETabView'
