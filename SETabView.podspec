@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SETabView'
-  s.version          = '1.1.1'
+  s.version          = '1.2'
   s.summary          = 'SETabView is a custom TabBar with really cool animations'
 
   s.description      = <<-DESC
