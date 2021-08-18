@@ -78,6 +78,7 @@ class HoleScaleTabView: UIView, AnimatedTabView {
     // MARK: Properties: Misc
     public var isSetup = false
     public var closureAfterSetup: (() -> Void)?
+    private var isTraitCollectionChangeSetup = false
 
     // MARK: Functions: Init
     
@@ -95,10 +96,14 @@ class HoleScaleTabView: UIView, AnimatedTabView {
         
     override open func layoutSubviews() {
         super.layoutSubviews()
+        print("Setting up tab layers")
+        setupTabLayers()
         if !isSetup {
-            setupTabLayers()
             isSetup = true
             closureAfterSetup?()
+        }
+        else {
+            translateShapeLayer()
         }
         
     }
@@ -168,7 +173,7 @@ extension HoleScaleTabView {
     
     private func createHolePath() -> CGPath {
         
-        let startOffset = CGFloat(selectedTabIndex) * sectionWidth + ((sectionWidth - itemWidth) / 2)
+        let startOffset = ((sectionWidth - itemWidth) / 2)
         let coverOffset = CGFloat(numberOfTabs - 1) * sectionWidth
         
         return SEPathProvider.getHolePath(for: bounds, startOffset: startOffset, coverOffset: coverOffset, itemWidth: itemWidth, sectionHeight: sectionHeight, heightScalingFactor: heightScalingFactor)

@@ -12,6 +12,7 @@ open class SEViewController: UIViewController {
     
     // MARK: Properties: TabBar
     private var lastSelectedTabIndex: Int?
+    private let tabBarHeight: CGFloat = 60
     /// the index of the view controller associated with the currently selected tab item
     public var selectedTabIndex: Int {
         get {
@@ -53,6 +54,9 @@ open class SEViewController: UIViewController {
                 fatalError("Must have at least one View Controller embedded in TabBar")
             } else {
                 viewControllers?.forEach(addChild(_:))
+                viewControllers?.forEach {
+                    $0.additionalSafeAreaInsets = UIEdgeInsets(top: 0, left: 0, bottom: tabBarHeight, right: 0)
+                }
                 self.setupViews()
                 self.setTabIcons()
                 
@@ -142,7 +146,7 @@ open class SEViewController: UIViewController {
         constraints.append(tabBar.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor))
         constraints.append(tabBar.trailingAnchor.constraint(equalTo: view.trailingAnchor))
         constraints.append(tabBar.leadingAnchor.constraint(equalTo: view.leadingAnchor))
-        constraints.append(tabBar.heightAnchor.constraint(equalToConstant: 60))
+        constraints.append(tabBar.heightAnchor.constraint(equalToConstant: tabBarHeight))
         
         // bottom filler view constraints
         constraints.append(bottomFillerView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor))

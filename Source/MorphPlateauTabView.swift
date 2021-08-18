@@ -101,10 +101,14 @@ class MorphPlateauTabView: UIView, AnimatedTabView {
     
     override open func layoutSubviews() {
         super.layoutSubviews()
+        setupTabLayers()
         if !isSetup {
-            setupTabLayers()
             isSetup = true
             closureAfterSetup?()
+        }
+        else {
+            translateShapeLayer()
+            rotateBall()
         }
         
     }
@@ -189,7 +193,7 @@ extension MorphPlateauTabView {
         
         var startOffset: CGFloat{
             if withOffset {
-                return CGFloat(selectedTabIndex) * sectionWidth + ((sectionWidth - itemWidth) / 2)
+                return (sectionWidth - itemWidth) / 2
             }
             else {
                 return 0
