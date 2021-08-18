@@ -26,7 +26,7 @@ it, simply add the following line to your Podfile:
 pod 'SETabView'
 ```
 
-In case the latest version (1.2) is not the one being installed, update the pod.
+In case the latest version (1.3.0) is not the one being installed, update the pod.
 
 ```
 pod update 'SETabView'
@@ -40,7 +40,7 @@ Once you have your Swift package set up, adding SETabView as a dependency is as 
 
 ```swift
 dependencies: [
-.package(url: "https://github.com/eshwavin/SETabView.git", .upToNextMajor(from: "1.2"))
+.package(url: "https://github.com/eshwavin/SETabView.git", .upToNextMajor(from: "1.3.0"))
 ]
 ```
 
