@@ -11,13 +11,20 @@
 		02A02CA8EFD3F1C67F56FA9FC8FC517D /* Pods-SETabView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E562ECC6E99760892FB9289D9AD75CB /* Pods-SETabView_Example-dummy.m */; };
 		3068103FFEBEAA8F4585249A2728F7EB /* Pods-SETabView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 726C1FC5276CB65B08C94E0405F6CE43 /* Pods-SETabView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5DCF1F0C574FDF0F8B4AF78FA22B5188 /* Pods-SETabView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1138587BC8F061AE1059FFC8B65A24 /* Pods-SETabView_Tests-dummy.m */; };
-		81DFD50D27E65E1F00E956E5 /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFD50C27E65E1F00E956E5 /* Deprecated.swift */; };
 		81DFD51427E65E8B00E956E5 /* SELayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFD51327E65E8B00E956E5 /* SELayer.swift */; };
 		81DFD51627E65EBE00E956E5 /* SEShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFD51527E65EBE00E956E5 /* SEShapeLayer.swift */; };
 		81DFD51927E65EF500E956E5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFD51827E65EF500E956E5 /* Constants.swift */; };
 		81DFD51B27E65F0F00E956E5 /* SELayerAnimationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFD51A27E65F0F00E956E5 /* SELayerAnimationProvider.swift */; };
 		81DFD51D27E65F2700E956E5 /* SETabSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFD51C27E65F2700E956E5 /* SETabSettings.swift */; };
 		81DFD51F27E65F3700E956E5 /* SEPathProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFD51E27E65F3600E956E5 /* SEPathProvider.swift */; };
+		81DFD52227E65F7F00E956E5 /* AnimatedTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFD52127E65F7F00E956E5 /* AnimatedTabView.swift */; };
+		81DFD52427E65F8E00E956E5 /* HoleScaleTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFD52327E65F8E00E956E5 /* HoleScaleTabView.swift */; };
+		81DFD52627E65FB400E956E5 /* InvertedPlateauTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFD52527E65FB400E956E5 /* InvertedPlateauTabView.swift */; };
+		81DFD52827E65FDB00E956E5 /* MorphPlateauTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFD52727E65FDB00E956E5 /* MorphPlateauTabView.swift */; };
+		81DFD52B27E65FFD00E956E5 /* SETabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFD52A27E65FFD00E956E5 /* SETabViewController.swift */; };
+		81DFD52E27E6601400E956E5 /* AnimatedTabViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFD52D27E6601400E956E5 /* AnimatedTabViewDelegate.swift */; };
+		81DFD53027E6602800E956E5 /* SETabItemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFD52F27E6602800E956E5 /* SETabItemProvider.swift */; };
+		81DFD53127E6610F00E956E5 /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFD50C27E65E1F00E956E5 /* Deprecated.swift */; };
 		A6BB37EFF3E95821C93B4AD3B5E78CAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		AD23C7B86B8D9783CCCB4160496F34DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		DD11FCABE21EC623F4018A2ADF01EED9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -63,6 +70,13 @@
 		81DFD51A27E65F0F00E956E5 /* SELayerAnimationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SELayerAnimationProvider.swift; sourceTree = "<group>"; };
 		81DFD51C27E65F2700E956E5 /* SETabSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SETabSettings.swift; sourceTree = "<group>"; };
 		81DFD51E27E65F3600E956E5 /* SEPathProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SEPathProvider.swift; sourceTree = "<group>"; };
+		81DFD52127E65F7F00E956E5 /* AnimatedTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTabView.swift; sourceTree = "<group>"; };
+		81DFD52327E65F8E00E956E5 /* HoleScaleTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoleScaleTabView.swift; sourceTree = "<group>"; };
+		81DFD52527E65FB400E956E5 /* InvertedPlateauTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvertedPlateauTabView.swift; sourceTree = "<group>"; };
+		81DFD52727E65FDB00E956E5 /* MorphPlateauTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorphPlateauTabView.swift; sourceTree = "<group>"; };
+		81DFD52A27E65FFD00E956E5 /* SETabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SETabViewController.swift; sourceTree = "<group>"; };
+		81DFD52D27E6601400E956E5 /* AnimatedTabViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTabViewDelegate.swift; sourceTree = "<group>"; };
+		81DFD52F27E6602800E956E5 /* SETabItemProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SETabItemProvider.swift; sourceTree = "<group>"; };
 		83878AF8E6094E05E93CADB4D012A204 /* SETabView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SETabView.debug.xcconfig; sourceTree = "<group>"; };
 		8BCB153920832A061DE464ECC569C516 /* Pods-SETabView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SETabView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8C7533ED452CC1E6301FA8831B2D86AE /* Pods-SETabView_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SETabView_Tests-Info.plist"; sourceTree = "<group>"; };
@@ -132,6 +146,8 @@
 		11AD700524E47CDC003E4AE9 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				81DFD52927E65FED00E956E5 /* ViewControllers */,
+				81DFD52027E65F6200E956E5 /* TabViews */,
 				81DFD51727E65ECE00E956E5 /* Utilities */,
 				81DFD50E27E65E2F00E956E5 /* Reusable */,
 				81DFD50B27E65E1400E956E5 /* Deprecated */,
@@ -190,6 +206,27 @@
 				81DFD51E27E65F3600E956E5 /* SEPathProvider.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		81DFD52027E65F6200E956E5 /* TabViews */ = {
+			isa = PBXGroup;
+			children = (
+				81DFD52127E65F7F00E956E5 /* AnimatedTabView.swift */,
+				81DFD52327E65F8E00E956E5 /* HoleScaleTabView.swift */,
+				81DFD52527E65FB400E956E5 /* InvertedPlateauTabView.swift */,
+				81DFD52727E65FDB00E956E5 /* MorphPlateauTabView.swift */,
+			);
+			path = TabViews;
+			sourceTree = "<group>";
+		};
+		81DFD52927E65FED00E956E5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				81DFD52A27E65FFD00E956E5 /* SETabViewController.swift */,
+				81DFD52D27E6601400E956E5 /* AnimatedTabViewDelegate.swift */,
+				81DFD52F27E6602800E956E5 /* SETabItemProvider.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		A1ED4CEE166ED03BFDC4DA0A530D2FFA /* Development Pods */ = {
@@ -425,7 +462,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81DFD50D27E65E1F00E956E5 /* Deprecated.swift in Sources */,
 				02A02CA8EFD3F1C67F56FA9FC8FC517D /* Pods-SETabView_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,9 +473,17 @@
 				FBEEAA6CE8440F8CCD74CD7AF89DF05D /* SETabView-dummy.m in Sources */,
 				81DFD51F27E65F3700E956E5 /* SEPathProvider.swift in Sources */,
 				81DFD51627E65EBE00E956E5 /* SEShapeLayer.swift in Sources */,
+				81DFD53027E6602800E956E5 /* SETabItemProvider.swift in Sources */,
+				81DFD52427E65F8E00E956E5 /* HoleScaleTabView.swift in Sources */,
 				81DFD51D27E65F2700E956E5 /* SETabSettings.swift in Sources */,
+				81DFD52E27E6601400E956E5 /* AnimatedTabViewDelegate.swift in Sources */,
 				81DFD51B27E65F0F00E956E5 /* SELayerAnimationProvider.swift in Sources */,
+				81DFD52627E65FB400E956E5 /* InvertedPlateauTabView.swift in Sources */,
+				81DFD52227E65F7F00E956E5 /* AnimatedTabView.swift in Sources */,
+				81DFD52827E65FDB00E956E5 /* MorphPlateauTabView.swift in Sources */,
 				81DFD51427E65E8B00E956E5 /* SELayer.swift in Sources */,
+				81DFD53127E6610F00E956E5 /* Deprecated.swift in Sources */,
+				81DFD52B27E65FFD00E956E5 /* SETabViewController.swift in Sources */,
 				81DFD51927E65EF500E956E5 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

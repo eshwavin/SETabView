@@ -9,16 +9,16 @@
 import UIKit
 import SETabView
 
-class ViewController: SEViewController {
+class ViewController: SETabViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // set tab bar look
-        setTabSettings(tabColor: UIColor.black, ballColor: UIColor.black, selectedTabTintColor: UIColor.white, deselectedTabTintColor: UIColor.gray, animationDuration: 1)
+        setTabColors(backgroundColor: .white, ballColor: .white, tintColor: .black, unselectedItemTintColor: .gray, barTintColor: .clear)
         
         // set view controllers
-        setViewControllers(getViewControllers(), initialSelectedTabIndex: 0, animationType: .holeBall3)
+        setViewControllers(getViewControllers())
         
     }
     

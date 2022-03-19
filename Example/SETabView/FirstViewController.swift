@@ -9,9 +9,9 @@
 import UIKit
 import SETabView
 
-class FirstViewController: UIViewController, SETabItem {
+class FirstViewController: UIViewController, SETabItemProvider {
     
-    var tabImage: UIImage? {
+    var seTabBarItem: UIImage? {
         return UIImage(named: "first")
     }
 

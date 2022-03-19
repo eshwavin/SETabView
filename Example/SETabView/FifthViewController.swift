@@ -9,9 +9,9 @@
 import UIKit
 import SETabView
 
-class FifthViewController: UIViewController, SETabItem {
+class FifthViewController: UIViewController, SETabItemProvider {
     
-    var tabImage: UIImage? {
+    var seTabBarItem: UIImage? {
            return UIImage(named: "fifth")
     }
 

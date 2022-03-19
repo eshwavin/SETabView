@@ -9,9 +9,9 @@
 import UIKit
 import SETabView
 
-class FourthViewController: UIViewController, SETabItem {
+class FourthViewController: UIViewController, SETabItemProvider {
     
-    var tabImage: UIImage? {
+    var seTabBarItem: UIImage? {
            return UIImage(named: "fourth")
     }
 
