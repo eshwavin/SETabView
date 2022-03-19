@@ -1,6 +1,6 @@
 //
 //  SELayer.swift
-//  SETabViewControl
+//  SETabView
 //
 //  Created by Srivinayak Chaitanya Eshwa on 12/08/20.
 //  Copyright © 2020 Srivinayak Chaitanya Eshwa. All rights reserved.
@@ -68,3 +68,4 @@ final class SELayer: CALayer {
     }
     
 }
+
