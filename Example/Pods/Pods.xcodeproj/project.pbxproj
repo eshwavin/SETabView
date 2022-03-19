@@ -11,6 +11,9 @@
 		02A02CA8EFD3F1C67F56FA9FC8FC517D /* Pods-SETabView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E562ECC6E99760892FB9289D9AD75CB /* Pods-SETabView_Example-dummy.m */; };
 		3068103FFEBEAA8F4585249A2728F7EB /* Pods-SETabView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 726C1FC5276CB65B08C94E0405F6CE43 /* Pods-SETabView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5DCF1F0C574FDF0F8B4AF78FA22B5188 /* Pods-SETabView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1138587BC8F061AE1059FFC8B65A24 /* Pods-SETabView_Tests-dummy.m */; };
+		81DFD50D27E65E1F00E956E5 /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFD50C27E65E1F00E956E5 /* Deprecated.swift */; };
+		81DFD51127E65E6400E956E5 /* SEShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFD50F27E65E6400E956E5 /* SEShapeLayer.swift */; };
+		81DFD51227E65E6400E956E5 /* SELayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFD51027E65E6400E956E5 /* SELayer.swift */; };
 		A6BB37EFF3E95821C93B4AD3B5E78CAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		AD23C7B86B8D9783CCCB4160496F34DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		DD11FCABE21EC623F4018A2ADF01EED9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -49,6 +52,9 @@
 		6C98725B0450C8575230DB30CA9E813A /* Pods-SETabView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SETabView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		726C1FC5276CB65B08C94E0405F6CE43 /* Pods-SETabView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SETabView_Tests-umbrella.h"; sourceTree = "<group>"; };
 		7A084BF45BF5AFF21DE675BB4B9B17B5 /* Pods-SETabView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SETabView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		81DFD50C27E65E1F00E956E5 /* Deprecated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deprecated.swift; sourceTree = "<group>"; };
+		81DFD50F27E65E6400E956E5 /* SEShapeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SEShapeLayer.swift; sourceTree = "<group>"; };
+		81DFD51027E65E6400E956E5 /* SELayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SELayer.swift; sourceTree = "<group>"; };
 		83878AF8E6094E05E93CADB4D012A204 /* SETabView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SETabView.debug.xcconfig; sourceTree = "<group>"; };
 		8BCB153920832A061DE464ECC569C516 /* Pods-SETabView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SETabView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8C7533ED452CC1E6301FA8831B2D86AE /* Pods-SETabView_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SETabView_Tests-Info.plist"; sourceTree = "<group>"; };
@@ -118,6 +124,8 @@
 		11AD700524E47CDC003E4AE9 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				81DFD50E27E65E2F00E956E5 /* Reusable */,
+				81DFD50B27E65E1400E956E5 /* Deprecated */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -145,6 +153,23 @@
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/SETabView";
+			sourceTree = "<group>";
+		};
+		81DFD50B27E65E1400E956E5 /* Deprecated */ = {
+			isa = PBXGroup;
+			children = (
+				81DFD50C27E65E1F00E956E5 /* Deprecated.swift */,
+			);
+			path = Deprecated;
+			sourceTree = "<group>";
+		};
+		81DFD50E27E65E2F00E956E5 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				81DFD51027E65E6400E956E5 /* SELayer.swift */,
+				81DFD50F27E65E6400E956E5 /* SEShapeLayer.swift */,
+			);
+			path = Reusable;
 			sourceTree = "<group>";
 		};
 		A1ED4CEE166ED03BFDC4DA0A530D2FFA /* Development Pods */ = {
@@ -323,8 +348,11 @@
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
 				TargetAttributes = {
+					4015489125017A2DE3635489B7911663 = {
+						LastSwiftMigration = 1300;
+					};
 					E78AFD5AE2F6D84D5E692BBBE6817BC1 = {
-						LastSwiftMigration = 1150;
+						LastSwiftMigration = 1300;
 					};
 				};
 			};
@@ -377,6 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81DFD50D27E65E1F00E956E5 /* Deprecated.swift in Sources */,
 				02A02CA8EFD3F1C67F56FA9FC8FC517D /* Pods-SETabView_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,6 +415,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBEEAA6CE8440F8CCD74CD7AF89DF05D /* SETabView-dummy.m in Sources */,
+				81DFD51127E65E6400E956E5 /* SEShapeLayer.swift in Sources */,
+				81DFD51227E65E6400E956E5 /* SELayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +452,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -444,6 +476,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -656,6 +690,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -679,6 +714,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
