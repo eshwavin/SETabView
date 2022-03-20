@@ -42,7 +42,6 @@ open class SETabViewController: UIViewController, AnimatedTabViewProperties {
         set {
             SETabSettings.current.backgroundColor = newValue
             _tabBar?.backgroundColorDidChange()
-            setBottomFillerViewColor()
         }
         get {
             return SETabSettings.current.backgroundColor
@@ -101,7 +100,7 @@ open class SETabViewController: UIViewController, AnimatedTabViewProperties {
     }
     
     // MARK: - Properties: Views/View Controllers
-    private var _tabBar: AnimatedTabView!
+    private var _tabBar: AnimatedTabViewProtocol!
     public var tabBar: AnimatedTabViewProperties {
         return self as AnimatedTabViewProperties
     }
@@ -289,7 +288,7 @@ open class SETabViewController: UIViewController, AnimatedTabViewProperties {
 extension SETabViewController {
     private func resetAnimationType() {
         
-        hideTabBar { [weak self] in
+        hideAndShowTabBar { [weak self] in
             guard let strongSelf = self else { return }
             let oldSelectedIndex = strongSelf._tabBar.selectedTabIndex
             strongSelf._tabBar.removeFromSuperview()
@@ -305,7 +304,7 @@ extension SETabViewController {
         
     }
     
-    private func hideTabBar(completionHandler: (() -> ())? = nil) {
+    private func hideAndShowTabBar(completionHandler: (() -> ())? = nil) {
         // TODO: Complete
         
         self._tabBar.isUserInteractionEnabled = false
@@ -344,12 +343,17 @@ extension SETabViewController: AnimatedTabViewDelegate {
         
         self.selectedIndex = index
     }
+    
+    func changeBottomFillerViewColor() {
+        setBottomFillerViewColor()
+    }
 }
 
 // MARK: - Trait collection change
 
 extension SETabViewController {
     open override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        hideTabBar()
+        super.traitCollectionDidChange(previousTraitCollection)
+        hideAndShowTabBar()
     }
 }

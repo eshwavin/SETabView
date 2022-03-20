@@ -10,4 +10,5 @@ import Foundation
 
 protocol AnimatedTabViewDelegate: AnyObject {
     func didSelectTab(at index: Int)
+    func changeBottomFillerViewColor()
 }

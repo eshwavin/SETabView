@@ -13,7 +13,7 @@ public enum AnimationType {
     case holeBall2
     case holeBall3
     
-    var tabView: AnimatedTabView {
+    var tabView: AnimatedTabViewProtocol {
         get {
             switch self {
             case .holeBall1:
