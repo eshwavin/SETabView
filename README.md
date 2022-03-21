@@ -21,6 +21,7 @@
 
 #### Bug fixes
 - A bug that caused holeBall3 to behave weirdly in larger screen sizes has been squashed
+- Glitchy landscape mode behaviour has been fixed
 
 A whole lot of performance optimizations have been added so that our library does not slow down your app. Hurray!
 
