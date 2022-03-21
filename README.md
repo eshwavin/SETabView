@@ -11,7 +11,7 @@
 
 ## What's New?
 
-#### We have made the API behaviour more like Apple's `UITabBarController`
+#### The API has been changed to resemble `UITabBarController`
 - Colors have been renamed to conform to colors specified by `UITabBar`
 - Colors can be set collectively as before (function parameter names have been changed to reflect the changed color names) or individually
 - Colors can now be changed at any point in time
