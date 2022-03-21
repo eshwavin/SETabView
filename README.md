@@ -89,6 +89,7 @@ class MyCustomTabViewController: SETabViewController {
 }
 ```
 
+### Setting the view controllers and colors
 
 Set the view controllers using `setViewControllers(_:)` method or by directly setting the `viewControllers` property 
 
@@ -123,6 +124,7 @@ class ViewController: SEViewController {
 }
 ```
 
+### Providing the image for the tab bar
 
 The child view controllers can conform to the `SETabItemProvider` protocol. Using `seTabImage` return a `UITabBarItem` for the view controller.
 
@@ -142,8 +144,7 @@ class FirstViewController: UIViewController, SETabItemProvider {
 }
 ```
 
-
-The selected tab can be changed programmatically
+### Setting the selected index programmatically
 
 ```swift
 selectedTabIndex = 3
