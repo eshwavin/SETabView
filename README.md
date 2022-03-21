@@ -9,6 +9,21 @@
 ---------| --------------|---------|
 <img src="https://github.com/eshwavin/SETabView/blob/master/Gifs/HoleBall1.gif"> | <img src="https://github.com/eshwavin/SETabView/blob/master/Gifs/HoleBall2.gif"> | <img src="https://github.com/eshwavin/SETabView/blob/master/Gifs/HoleBall3.gif">
 
+## What's New?
+
+### We have made the API behaviour more like Apple's `UITabBarController`
+- Colors have been renamed to conform to colors specified by `UITabBar`
+- Colors can be set collectively as before (function parameter names have been changed to reflect the changed color names) or individually
+- Colors can now be changed at any point in time
+- The view controllers at any time
+- The animation type can be changed at any time to switch between available animations by setting the `animationType` property!
+- `animationDuration` can no longer be changed
+
+### Bug fixes
+- A bug that caused holeBall3 to behave weirdly in larger screen sizes has been squashed
+
+### A whole lot of performance optimisations have been added so that our library does not slow down your app. Hurray!
+
 ## Requirements
 
 - Swift 5+
@@ -26,7 +41,7 @@ it, simply add the following line to your Podfile:
 pod 'SETabView'
 ```
 
-In case the latest version (1.3.0) is not the one being installed, update the pod.
+In case the latest version (2.0.0) is not the one being installed, update the pod.
 
 ```
 pod update 'SETabView'
@@ -40,7 +55,7 @@ Once you have your Swift package set up, adding SETabView as a dependency is as 
 
 ```swift
 dependencies: [
-.package(url: "https://github.com/eshwavin/SETabView.git", .upToNextMajor(from: "1.3.0"))
+.package(url: "https://github.com/eshwavin/SETabView.git", .upToNextMajor(from: "2.0.0"))
 ]
 ```
 
@@ -62,9 +77,9 @@ Import `SETabView` into the parent view controller and any child view controller
 import SETabView
 ```
 
-Inherit the `SEViewController` class in the parent view controller
+Inherit from the `SETabViewController` class in your tab view controller
 ```swift
-class ViewController: SEViewController {
+class MyCustomTabViewController: SETabViewController {
 
    override func viewDidLoad() {
     super.viewDidLoad()
@@ -73,13 +88,10 @@ class ViewController: SEViewController {
 }
 ```
 
-In  `viewDidLoad` of the parent view controller, customise your tab bar look and set the child view controllers. 
+Set the view controllers using `setViewControllers(_:)` method or by directly setting the `viewControllers` property 
 
-Set the view controllers using `setViewControllers(_ viewControllers: [UIViewController], initialSelectedTabIndex: Int, animationType: AnimationType)` method.
+Customise the look by calling `setTabColors(backgroundColor:ballColor:tintColor:unselectedItemTintColor:barTintColor:)` method or simply setting the respective colors
 
-Customise the look by calling `setTabSettings(tabColor: UIColor, ballColor: UIColor, selectedTabTintColor: UIColor, deselectedTabTintColor: UIColor, animationDuration: Double)` method.
-
-**Make sure to call `setTabSettings` *before* setting your view controllers for the customisation to apply**
 
 ```swift
 class ViewController: SEViewController {
@@ -87,10 +99,10 @@ class ViewController: SEViewController {
     override func viewDidLoad() {
       super.viewDidLoad()
       
-      // set tab bar look
-      setTabSettings(tabColor: UIColor.black, ballColor: UIColor.black, selectedTabTintColor: UIColor.white, deselectedTabTintColor: UIColor.gray, animationDuration: 1)
+      // set tab bar look collectively
+      setTabColors(backgroundColor: UIColor.white, ballColor: UIColor.white, tintColor: UIColor.black, unselectedItemTintColor: UIColor.red, barTintColor: .clear)
       
-      // set the viwe controllers
+      // set the view controllers
       setViewControllers(getViewControllers(), initialSelectedTabIndex: 0, animationType: .holeBall3)
 
     }
@@ -108,13 +120,16 @@ class ViewController: SEViewController {
     }   
 }
 ```
-The child view controllers need to conform to the `SETabItem` protocol. Using `tabImage` return the image you want as the icon for the tab for that view controller.
+The child view controllers can conform to the `SETabItemProvider` protocol. Using `seTabImage` return a `UITabBarItem` for the view controller.
+
+
+Alternatively you can set the `tabBarItem` property for the view controllers as you would do when using `UITabBarController`
 
 ```swift
-class FirstViewController: UIViewController, SETabItem {
+class FirstViewController: UIViewController, SETabItemProvider {
 
-    var tabImage: UIImage? {
-        return UIImage(named: "first")
+    var seTabBarItem: UITabBarItem? {
+        return UITabBarItem(title: "", image: UIImage(named: "first"), tag: 0)
     }
 
     override func viewDidLoad() {
@@ -126,17 +141,23 @@ class FirstViewController: UIViewController, SETabItem {
 The selected tab can be changed programmatically
 
 ```swift
-self.selectedTabIndex = 3
+selectedTabIndex = 3
 ```
 
 ## Restrictions
 
 - Max 5 Tabs
-- Tab Bar look cannot be changed once set in `setTabSettings()`
 
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+## Planned Improvements
+
+- More `UITabBarController` behaviours
+- Increasing support for number of tabs by introducing a **More** tab
+- Badges
+- Performance improvements as always
 
 ## Author
 
@@ -145,6 +166,7 @@ Srivinayak Chaitanya Eshwa, eshwavin@gmail.com
 ## License
 
 SETabView is available under the MIT license. See the LICENSE file for more info.
+SETabView uses the complete OrderedCollections code from [swift-collections](https://github.com/apple/swift-collections)
 
 ## Acknowledgement
 
