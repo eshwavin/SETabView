@@ -5,7 +5,7 @@
 //  Created by Vinayak Eshwa on 20/03/22.
 //
 
-import Foundation
+import UIKit
 
 struct SETimingFunction {
     public static let seEaseIn = CAMediaTimingFunction(controlPoints: 0.6, 0, 1, 1)
