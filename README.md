@@ -163,7 +163,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 - More `UITabBarController` behaviours
 - Increasing support for number of tabs by introducing a **More** tab
 - Badges
-- Performance improvements as always
+- Performance improvements
 
 ## Author
 
