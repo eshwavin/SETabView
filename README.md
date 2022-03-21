@@ -22,7 +22,7 @@
 #### Bug fixes
 - A bug that caused holeBall3 to behave weirdly in larger screen sizes has been squashed
 
-A whole lot of performance optimisations have been added so that our library does not slow down your app. Hurray!
+A whole lot of performance optimizations have been added so that our library does not slow down your app. Hurray!
 
 ## Requirements
 
@@ -88,6 +88,7 @@ class MyCustomTabViewController: SETabViewController {
 }
 ```
 
+
 Set the view controllers using `setViewControllers(_:)` method or by directly setting the `viewControllers` property 
 
 Customise the look by calling `setTabColors(backgroundColor:ballColor:tintColor:unselectedItemTintColor:barTintColor:)` method or simply setting the respective colors
@@ -120,6 +121,8 @@ class ViewController: SEViewController {
     }   
 }
 ```
+
+
 The child view controllers can conform to the `SETabItemProvider` protocol. Using `seTabImage` return a `UITabBarItem` for the view controller.
 
 
@@ -137,6 +140,7 @@ class FirstViewController: UIViewController, SETabItemProvider {
     }
 }
 ```
+
 
 The selected tab can be changed programmatically
 
