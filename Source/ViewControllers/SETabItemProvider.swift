@@ -9,5 +9,5 @@
 import UIKit
 
 public protocol SETabItemProvider {
-    var seTabBarItem: UIImage? {get}
+    var seTabBarItem: UITabBarItem? {get}
 }

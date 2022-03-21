@@ -11,8 +11,8 @@ import SETabView
 
 class FifthViewController: UIViewController, SETabItemProvider {
     
-    var seTabBarItem: UIImage? {
-           return UIImage(named: "fifth")
+    var seTabBarItem: UITabBarItem? {
+        return UITabBarItem(title: "", image: UIImage(named: "fifth"), tag: 0)
     }
 
     override func viewDidLoad() {

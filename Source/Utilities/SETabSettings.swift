@@ -14,22 +14,22 @@ final class SETabSettings {
     
     private init() {}
     
-    var animationDuration: Double = 0.5
+    private var animationDuration: Double = 1.5
     
     var switchTabAnimationDuration: Double {
-        return animationDuration
+        return animationDuration * 0.3
     }
     
     var ballAnimationDuration: Double {
-        return animationDuration
+        return animationDuration * 0.3
     }
     
     var changeTintColorAnimationDuration: Double {
-        return animationDuration
+        return animationDuration * 0.3
     }
     
     var scaleBallDelayTime: Double {
-        return animationDuration * 0.6
+        return animationDuration * 0.2
     }
     
     var backgroundColor = UIColor.clear

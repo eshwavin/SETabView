@@ -11,8 +11,8 @@ import SETabView
 
 class SecondViewController: UIViewController, SETabItemProvider {
     
-    var seTabBarItem: UIImage? {
-           return UIImage(named: "second")
+    var seTabBarItem: UITabBarItem? {
+        return UITabBarItem(title: "", image: UIImage(named: "second"), tag: 0)
     }
 
     override func viewDidLoad() {

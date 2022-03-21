@@ -31,5 +31,4 @@ public protocol AnimatedTabViewProperties {
     var ballColor: UIColor { get set }
     var unselectedItemTintColor: UIColor { get set }
     var barTintColor: UIColor { get set }
-    var animationDuration: Double { get set }
 }

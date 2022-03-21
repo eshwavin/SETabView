@@ -11,8 +11,8 @@ import SETabView
 
 class FourthViewController: UIViewController, SETabItemProvider {
     
-    var seTabBarItem: UIImage? {
-           return UIImage(named: "fourth")
+    var seTabBarItem: UITabBarItem? {
+        return UITabBarItem(title: "", image: UIImage(named: "fourth"), tag: 0)
     }
 
     override func viewDidLoad() {

@@ -205,6 +205,18 @@ extension AnimatedTabView {
         
     }
     
+    func setupTabImagePositions() {
+        tabImageLayers.enumerated().forEach { (offset, imageLayer) in
+            
+            let y = offset == Int(selectedTabIndex) ? 0 : (bounds.height / 2) - (iconSize / 2)
+            let x = (CGFloat(offset) * sectionWidth) + (sectionWidth / 2.0) - (iconSize / 2.0)
+            imageLayer.frame = CGRect(x: x, y: y, width: iconSize, height: iconSize)
+            imageLayer.mask?.frame = imageLayer.bounds
+            imageLayer.backgroundColor = offset == Int(selectedTabIndex) ? SETabSettings.current.tintColor.cgColor : SETabSettings.current.unselectedItemTintColor.cgColor
+            
+        }
+    }
+    
 }
 
 // MARK: Paths

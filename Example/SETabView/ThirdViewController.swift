@@ -11,8 +11,8 @@ import SETabView
 
 class ThirdViewController: UIViewController, SETabItemProvider {
     
-    var seTabBarItem: UIImage? {
-           return UIImage(named: "third")
+    var seTabBarItem: UITabBarItem? {
+        return UITabBarItem(title: "", image: UIImage(named: "third"), tag: 0)
     }
 
     override func viewDidLoad() {
