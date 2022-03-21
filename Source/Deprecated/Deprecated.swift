@@ -5,6 +5,8 @@
 //  Created by Vinayak Eshwa on 20/03/22.
 //
 
+import UIKit
+
 @available(iOS, obsoleted: 2.0.0, renamed: "SETabViewController")
 open class SEViewController { }
 
