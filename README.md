@@ -11,7 +11,7 @@
 
 ## What's New?
 
-### We have made the API behaviour more like Apple's `UITabBarController`
+#### We have made the API behaviour more like Apple's `UITabBarController`
 - Colors have been renamed to conform to colors specified by `UITabBar`
 - Colors can be set collectively as before (function parameter names have been changed to reflect the changed color names) or individually
 - Colors can now be changed at any point in time
@@ -19,10 +19,10 @@
 - The animation type can be changed at any time to switch between available animations by setting the `animationType` property!
 - `animationDuration` can no longer be changed
 
-### Bug fixes
+#### Bug fixes
 - A bug that caused holeBall3 to behave weirdly in larger screen sizes has been squashed
 
-### A whole lot of performance optimisations have been added so that our library does not slow down your app. Hurray!
+A whole lot of performance optimisations have been added so that our library does not slow down your app. Hurray!
 
 ## Requirements
 
