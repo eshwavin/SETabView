@@ -105,8 +105,11 @@ class ViewController: SEViewController {
       // set tab bar look collectively
       setTabColors(backgroundColor: UIColor.white, ballColor: UIColor.white, tintColor: UIColor.black, unselectedItemTintColor: UIColor.red, barTintColor: .clear)
       
+      // set animation type
+      animationType = .holeball3
+      
       // set the view controllers
-      setViewControllers(getViewControllers(), initialSelectedTabIndex: 0, animationType: .holeBall3)
+      setViewControllers(getViewControllers())
 
     }
 
